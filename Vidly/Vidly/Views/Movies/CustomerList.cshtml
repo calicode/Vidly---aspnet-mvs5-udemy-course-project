@@ -1,0 +1,22 @@
+﻿@model  Vidly.ViewModels.CustomerListViewModel
+@{
+    ViewBag.Title = "CustomerList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Customer list</h2> <hl></hl>
+
+
+@if (Model.CustomerList.Count <= 0)
+{ <text>
+        No customers in database. You are a bad movie store. </text>}
+
+else
+{ <ul>
+
+    @foreach (var customer in Model.CustomerList)
+    {
+    <li>@customer.Name</li>
+
+    }
+</ul>}
+
